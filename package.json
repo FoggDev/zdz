@@ -1,5 +1,5 @@
 {
-  "name": "zdz",
+  "name": "zdzz",
   "version": "1.0.0",
   "main": "dist/index.js",
   "scripts": {
@@ -11,7 +11,8 @@
     "test:verbose": "jest --verbose --no-cache --maxWorkers=4",
     "test:watch": "jest --watch",
     "test:watchAll": "jest --watchAll",
-    "test:coverage": "jest --coverage"
+    "test:coverage": "jest --coverage",
+    "prepublish": "npm run build"
   },
   "author": "Carlos Santana",
   "files": [
