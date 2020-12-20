@@ -1,6 +1,8 @@
 // Importing original module declarations
 import '@emotion/react'
 
+import { Breakpoints } from '../theme/createBreakpoints'
+
 // and extend them!
 interface IBackground {
   paper: string
