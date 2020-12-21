@@ -46,9 +46,7 @@ const ButtonSizesStyles = css`
   }
 `
 
-const ButtonVariantsStyles = (themeConfig: Theme) => {
-  console.log('THEME Config====', themeConfig)
-  const theme = themeConfig || defaultTheme
+const ButtonVariantsStyles = (theme: Theme) => {
   console.log('LAST THEME===', theme)
   return css`
     &.${COMPONENT_CLASS_NAME}-contained {
@@ -339,5 +337,8 @@ export const ButtonBase = styled.button`
 
   ${ButtonSizesStyles}
 
-  ${({ theme }) => (theme ? ButtonVariantsStyles(theme) : ButtonVariantsStyles(defaultTheme))}
+  ${({ theme }) =>
+    Object.keys(theme).length > 0
+      ? ButtonVariantsStyles(theme)
+      : ButtonVariantsStyles(defaultTheme)}
 `
