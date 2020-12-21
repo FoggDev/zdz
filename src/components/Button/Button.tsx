@@ -6,7 +6,6 @@ import { COMPONENT_CLASS_NAME, ButtonBase, Sizes, Variants, Colors } from './sty
 interface iProps {
   children: any
   theme?: any
-  className: string
   size?: Sizes
   variant?: Variants
   color?: Colors
