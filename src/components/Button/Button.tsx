@@ -1,15 +1,32 @@
 import React, { FC } from 'react'
-import { ButtonBase } from './styles'
+import { defaultTheme } from '../../theme'
+import classNamesGenerator from '../../theme/classNamesGenerator'
+import { COMPONENT_CLASS_NAME, ButtonBase, Sizes, Variants, Colors } from './styles'
 
 interface iProps {
   children: any
   theme?: any
   className: string
+  size?: Sizes
+  variant?: Variants
+  color?: Colors
 }
 
-const Button: FC<iProps> = ({ children, theme, className }) => {
+const Button: FC<iProps> = ({
+  children,
+  theme,
+  size = 'md',
+  variant = 'contained',
+  color = 'primary'
+}) => {
+  const classNames = classNamesGenerator({
+    cpn: 'Button',
+    ccn: COMPONENT_CLASS_NAME,
+    data: [size, variant, color]
+  })
+
   return (
-    <ButtonBase theme={theme} className={className}>
+    <ButtonBase theme={theme || defaultTheme} className={classNames}>
       {children}
     </ButtonBase>
   )
