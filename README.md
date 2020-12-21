@@ -87,7 +87,7 @@ Will generate:
 
 `<button class="Button btn btn-md btn-contained btn-primary css-678ace">Hello World</button>`
 
-So the default size is `md`, the default variant is `contained` and the default colo is `primary`.
+So the default size is `md`, the default variant is `contained` and the default color is `primary`.
 
 So you can change the button color by passing the color prop:
 
