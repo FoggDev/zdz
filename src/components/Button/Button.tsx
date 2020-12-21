@@ -22,9 +22,9 @@ const Button: FC<Props> = ({
     ccn: COMPONENT_CLASS_NAME,
     data: [size, variant, color]
   })
-
+  console.log('THEME===', theme)
   return (
-    <ButtonBase theme={theme || defaultTheme} className={classNames}>
+    <ButtonBase theme={theme} className={classNames}>
       {children}
     </ButtonBase>
   )
