@@ -3,7 +3,7 @@ import { ButtonBase } from './styles'
 
 interface iProps {
   children: any
-  theme: any
+  theme?: any
   className: string
 }
 
