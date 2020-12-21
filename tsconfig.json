@@ -14,7 +14,11 @@
     "jsx": "react",
     "strictFunctionTypes": false
   },
-  "files": ["src/components/Button/index.ts", "src/theme/theme.ts"],
+  "files": [
+    "src/components/Button/index.ts",
+    "src/theme/theme.ts",
+    "src/components/Text/index.tsx"
+  ],
   "include": ["src/**/*.ts"],
   "exclude": ["node_modules", "**/__tests__/*"]
 }
