@@ -337,6 +337,6 @@ export const ButtonBase = styled.button`
   ${({ theme }) => ButtonVariantsStyles(theme)}
 `
 
-ButtonBase.defaultProps = {
-  theme: defaultTheme
-}
+// ButtonBase.defaultProps = {
+//   theme: defaultTheme
+// }
