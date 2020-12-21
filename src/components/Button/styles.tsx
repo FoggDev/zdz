@@ -46,273 +46,278 @@ const ButtonSizesStyles = css`
   }
 `
 
-const ButtonVariantsStyles = (theme: Theme) => css`
-  &.${COMPONENT_CLASS_NAME}-contained {
-    &.${COMPONENT_CLASS_NAME}-primary {
-      color: ${theme.palette.primary.contrastText};
-      background-color: ${theme.palette.primary.main};
-      border-color: ${theme.palette.primary.main};
-
-      &:hover {
-        background-color: ${theme.palette.primary.dark};
-        border-color: ${theme.palette.primary.dark};
-      }
-    }
-
-    &.${COMPONENT_CLASS_NAME}-secondary {
-      color: ${theme.palette.secondary.contrastText};
-      background-color: ${theme.palette.secondary.main};
-      border-color: ${theme.palette.secondary.main};
-
-      &:hover {
-        background-color: ${theme.palette.secondary.dark};
-        border-color: ${theme.palette.secondary.dark};
-      }
-    }
-
-    &.${COMPONENT_CLASS_NAME}-info {
-      color: ${theme.palette.info.contrastText};
-      background-color: ${theme.palette.info.main};
-      border-color: ${theme.palette.info.main};
-
-      &:hover {
-        background-color: ${theme.palette.info.dark};
-        border-color: ${theme.palette.info.dark};
-      }
-    }
-
-    &.${COMPONENT_CLASS_NAME}-success {
-      color: ${theme.palette.success.contrastText};
-      background-color: ${theme.palette.success.main};
-      border-color: ${theme.palette.success.main};
-
-      &:hover {
-        background-color: ${theme.palette.success.dark};
-        border-color: ${theme.palette.success.dark};
-      }
-    }
-
-    &.${COMPONENT_CLASS_NAME}-warning {
-      color: ${theme.palette.warning.contrastText};
-      background-color: ${theme.palette.warning.main};
-      border-color: ${theme.palette.warning.main};
-
-      &:hover {
-        background-color: ${theme.palette.warning.dark};
-        border-color: ${theme.palette.warning.dark};
-      }
-    }
-
-    &.${COMPONENT_CLASS_NAME}-danger {
-      color: ${theme.palette.danger.contrastText};
-      background-color: ${theme.palette.danger.main};
-      border-color: ${theme.palette.danger.main};
-
-      &:hover {
-        background-color: ${theme.palette.danger.dark};
-        border-color: ${theme.palette.danger.dark};
-      }
-    }
-
-    &.${COMPONENT_CLASS_NAME}-ligh {
-      color: ${theme.palette.light.contrastText};
-      background-color: ${theme.palette.light.main};
-      border-color: ${theme.palette.light.main};
-
-      &:hover {
-        background-color: ${theme.palette.light.dark};
-        border-color: ${theme.palette.light.dark};
-      }
-    }
-
-    &.${COMPONENT_CLASS_NAME}-dark {
-      color: ${theme.palette.dark.contrastText};
-      background-color: ${theme.palette.dark.main};
-      border-color: ${theme.palette.dark.main};
-
-      &:hover {
-        background-color: ${theme.palette.dark.dark};
-        border-color: ${theme.palette.dark.dark};
-      }
-    }
-  }
-
-  &.${COMPONENT_CLASS_NAME}-outlined {
-    &.${COMPONENT_CLASS_NAME}-primary {
-      color: ${theme.palette.primary.main};
-      background-color: transparent;
-      border-color: ${theme.palette.primary.main};
-
-      &:hover {
+const ButtonVariantsStyles = (themeConfig: Theme) => {
+  console.log('THEME Config====', themeConfig)
+  const theme = themeConfig || defaultTheme
+  console.log('LAST THEME===', theme)
+  return css`
+    &.${COMPONENT_CLASS_NAME}-contained {
+      &.${COMPONENT_CLASS_NAME}-primary {
         color: ${theme.palette.primary.contrastText};
         background-color: ${theme.palette.primary.main};
         border-color: ${theme.palette.primary.main};
+
+        &:hover {
+          background-color: ${theme.palette.primary.dark};
+          border-color: ${theme.palette.primary.dark};
+        }
       }
-    }
 
-    &.${COMPONENT_CLASS_NAME}-secondary {
-      color: ${theme.palette.secondary.main};
-      background-color: transparent;
-      border-color: ${theme.palette.secondary.main};
-
-      &:hover {
+      &.${COMPONENT_CLASS_NAME}-secondary {
         color: ${theme.palette.secondary.contrastText};
         background-color: ${theme.palette.secondary.main};
         border-color: ${theme.palette.secondary.main};
+
+        &:hover {
+          background-color: ${theme.palette.secondary.dark};
+          border-color: ${theme.palette.secondary.dark};
+        }
       }
-    }
 
-    &.${COMPONENT_CLASS_NAME}-info {
-      color: ${theme.palette.info.main};
-      background-color: transparent;
-      border-color: ${theme.palette.info.main};
-
-      &:hover {
+      &.${COMPONENT_CLASS_NAME}-info {
         color: ${theme.palette.info.contrastText};
         background-color: ${theme.palette.info.main};
         border-color: ${theme.palette.info.main};
+
+        &:hover {
+          background-color: ${theme.palette.info.dark};
+          border-color: ${theme.palette.info.dark};
+        }
       }
-    }
 
-    &.${COMPONENT_CLASS_NAME}-success {
-      color: ${theme.palette.success.main};
-      background-color: transparent;
-      border-color: ${theme.palette.success.main};
-
-      &:hover {
+      &.${COMPONENT_CLASS_NAME}-success {
         color: ${theme.palette.success.contrastText};
         background-color: ${theme.palette.success.main};
         border-color: ${theme.palette.success.main};
+
+        &:hover {
+          background-color: ${theme.palette.success.dark};
+          border-color: ${theme.palette.success.dark};
+        }
       }
-    }
 
-    &.${COMPONENT_CLASS_NAME}-warning {
-      color: ${theme.palette.warning.main};
-      background-color: transparent;
-      border-color: ${theme.palette.warning.main};
-
-      &:hover {
+      &.${COMPONENT_CLASS_NAME}-warning {
         color: ${theme.palette.warning.contrastText};
         background-color: ${theme.palette.warning.main};
         border-color: ${theme.palette.warning.main};
+
+        &:hover {
+          background-color: ${theme.palette.warning.dark};
+          border-color: ${theme.palette.warning.dark};
+        }
       }
-    }
 
-    &.${COMPONENT_CLASS_NAME}-danger {
-      color: ${theme.palette.danger.main};
-      background-color: transparent;
-      border-color: ${theme.palette.danger.main};
-
-      &:hover {
+      &.${COMPONENT_CLASS_NAME}-danger {
         color: ${theme.palette.danger.contrastText};
         background-color: ${theme.palette.danger.main};
         border-color: ${theme.palette.danger.main};
+
+        &:hover {
+          background-color: ${theme.palette.danger.dark};
+          border-color: ${theme.palette.danger.dark};
+        }
       }
-    }
 
-    &.${COMPONENT_CLASS_NAME}-light {
-      color: ${theme.palette.light.main};
-      background-color: transparent;
-      border-color: ${theme.palette.light.main};
-
-      &:hover {
+      &.${COMPONENT_CLASS_NAME}-ligh {
         color: ${theme.palette.light.contrastText};
         background-color: ${theme.palette.light.main};
         border-color: ${theme.palette.light.main};
+
+        &:hover {
+          background-color: ${theme.palette.light.dark};
+          border-color: ${theme.palette.light.dark};
+        }
       }
-    }
 
-    &.${COMPONENT_CLASS_NAME}-dark {
-      color: ${theme.palette.dark.main};
-      background-color: transparent;
-      border-color: ${theme.palette.dark.main};
-
-      &:hover {
+      &.${COMPONENT_CLASS_NAME}-dark {
         color: ${theme.palette.dark.contrastText};
         background-color: ${theme.palette.dark.main};
         border-color: ${theme.palette.dark.main};
-      }
-    }
-  }
 
-  &.${COMPONENT_CLASS_NAME}-text {
-    &.${COMPONENT_CLASS_NAME}-primary {
-      color: ${theme.palette.primary.main};
-      background-color: transparent;
-      border-color: transparent;
-
-      &:hover {
-        background-color: rgba(0, 0, 0, 0.04);
+        &:hover {
+          background-color: ${theme.palette.dark.dark};
+          border-color: ${theme.palette.dark.dark};
+        }
       }
     }
 
-    &.${COMPONENT_CLASS_NAME}-secondary {
-      color: ${theme.palette.secondary.main};
-      background-color: transparent;
-      border-color: transparent;
-      &:hover {
-        background-color: rgba(0, 0, 0, 0.04);
+    &.${COMPONENT_CLASS_NAME}-outlined {
+      &.${COMPONENT_CLASS_NAME}-primary {
+        color: ${theme.palette.primary.main};
+        background-color: transparent;
+        border-color: ${theme.palette.primary.main};
+
+        &:hover {
+          color: ${theme.palette.primary.contrastText};
+          background-color: ${theme.palette.primary.main};
+          border-color: ${theme.palette.primary.main};
+        }
+      }
+
+      &.${COMPONENT_CLASS_NAME}-secondary {
+        color: ${theme.palette.secondary.main};
+        background-color: transparent;
+        border-color: ${theme.palette.secondary.main};
+
+        &:hover {
+          color: ${theme.palette.secondary.contrastText};
+          background-color: ${theme.palette.secondary.main};
+          border-color: ${theme.palette.secondary.main};
+        }
+      }
+
+      &.${COMPONENT_CLASS_NAME}-info {
+        color: ${theme.palette.info.main};
+        background-color: transparent;
+        border-color: ${theme.palette.info.main};
+
+        &:hover {
+          color: ${theme.palette.info.contrastText};
+          background-color: ${theme.palette.info.main};
+          border-color: ${theme.palette.info.main};
+        }
+      }
+
+      &.${COMPONENT_CLASS_NAME}-success {
+        color: ${theme.palette.success.main};
+        background-color: transparent;
+        border-color: ${theme.palette.success.main};
+
+        &:hover {
+          color: ${theme.palette.success.contrastText};
+          background-color: ${theme.palette.success.main};
+          border-color: ${theme.palette.success.main};
+        }
+      }
+
+      &.${COMPONENT_CLASS_NAME}-warning {
+        color: ${theme.palette.warning.main};
+        background-color: transparent;
+        border-color: ${theme.palette.warning.main};
+
+        &:hover {
+          color: ${theme.palette.warning.contrastText};
+          background-color: ${theme.palette.warning.main};
+          border-color: ${theme.palette.warning.main};
+        }
+      }
+
+      &.${COMPONENT_CLASS_NAME}-danger {
+        color: ${theme.palette.danger.main};
+        background-color: transparent;
+        border-color: ${theme.palette.danger.main};
+
+        &:hover {
+          color: ${theme.palette.danger.contrastText};
+          background-color: ${theme.palette.danger.main};
+          border-color: ${theme.palette.danger.main};
+        }
+      }
+
+      &.${COMPONENT_CLASS_NAME}-light {
+        color: ${theme.palette.light.main};
+        background-color: transparent;
+        border-color: ${theme.palette.light.main};
+
+        &:hover {
+          color: ${theme.palette.light.contrastText};
+          background-color: ${theme.palette.light.main};
+          border-color: ${theme.palette.light.main};
+        }
+      }
+
+      &.${COMPONENT_CLASS_NAME}-dark {
+        color: ${theme.palette.dark.main};
+        background-color: transparent;
+        border-color: ${theme.palette.dark.main};
+
+        &:hover {
+          color: ${theme.palette.dark.contrastText};
+          background-color: ${theme.palette.dark.main};
+          border-color: ${theme.palette.dark.main};
+        }
       }
     }
 
-    &.${COMPONENT_CLASS_NAME}-info {
-      color: ${theme.palette.info.main};
-      background-color: transparent;
-      border-color: transparent;
-      &:hover {
-        background-color: rgba(0, 0, 0, 0.04);
+    &.${COMPONENT_CLASS_NAME}-text {
+      &.${COMPONENT_CLASS_NAME}-primary {
+        color: ${theme.palette.primary.main};
+        background-color: transparent;
+        border-color: transparent;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.04);
+        }
+      }
+
+      &.${COMPONENT_CLASS_NAME}-secondary {
+        color: ${theme.palette.secondary.main};
+        background-color: transparent;
+        border-color: transparent;
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.04);
+        }
+      }
+
+      &.${COMPONENT_CLASS_NAME}-info {
+        color: ${theme.palette.info.main};
+        background-color: transparent;
+        border-color: transparent;
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.04);
+        }
+      }
+
+      &.${COMPONENT_CLASS_NAME}-success {
+        color: ${theme.palette.success.main};
+        background-color: transparent;
+        border-color: transparent;
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.04);
+        }
+      }
+
+      &.${COMPONENT_CLASS_NAME}-warning {
+        color: ${theme.palette.warning.main};
+        background-color: transparent;
+        border-color: transparent;
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.04);
+        }
+      }
+
+      &.${COMPONENT_CLASS_NAME}-danger {
+        color: ${theme.palette.danger.main};
+        background-color: transparent;
+        border-color: transparent;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.04);
+        }
+      }
+
+      &.${COMPONENT_CLASS_NAME}-light {
+        color: ${theme.palette.light.main};
+        background-color: transparent;
+        border-color: transparent;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.04);
+        }
+      }
+
+      &.${COMPONENT_CLASS_NAME}-dark {
+        color: ${theme.palette.dark.main};
+        background-color: transparent;
+        border-color: transparent;
+
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.04);
+        }
       }
     }
-
-    &.${COMPONENT_CLASS_NAME}-success {
-      color: ${theme.palette.success.main};
-      background-color: transparent;
-      border-color: transparent;
-      &:hover {
-        background-color: rgba(0, 0, 0, 0.04);
-      }
-    }
-
-    &.${COMPONENT_CLASS_NAME}-warning {
-      color: ${theme.palette.warning.main};
-      background-color: transparent;
-      border-color: transparent;
-      &:hover {
-        background-color: rgba(0, 0, 0, 0.04);
-      }
-    }
-
-    &.${COMPONENT_CLASS_NAME}-danger {
-      color: ${theme.palette.danger.main};
-      background-color: transparent;
-      border-color: transparent;
-
-      &:hover {
-        background-color: rgba(0, 0, 0, 0.04);
-      }
-    }
-
-    &.${COMPONENT_CLASS_NAME}-light {
-      color: ${theme.palette.light.main};
-      background-color: transparent;
-      border-color: transparent;
-
-      &:hover {
-        background-color: rgba(0, 0, 0, 0.04);
-      }
-    }
-
-    &.${COMPONENT_CLASS_NAME}-dark {
-      color: ${theme.palette.dark.main};
-      background-color: transparent;
-      border-color: transparent;
-
-      &:hover {
-        background-color: rgba(0, 0, 0, 0.04);
-      }
-    }
-  }
-`
+  `
+}
 
 export const ButtonBase = styled.button`
   &.${COMPONENT_CLASS_NAME} {
