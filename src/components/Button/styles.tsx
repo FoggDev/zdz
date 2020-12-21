@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import { css, Theme } from '@emotion/react'
+import { defaultTheme } from '../../theme'
 
 export const COMPONENT_CLASS_NAME = 'btn'
 
@@ -333,5 +334,5 @@ export const ButtonBase = styled.button`
 
   ${ButtonSizesStyles}
 
-  ${({ theme }) => ButtonVariantsStyles(theme)}
+  ${({ theme }) => ButtonVariantsStyles(theme || defaultTheme)}
 `
