@@ -16,6 +16,8 @@ const Button: React.FC<Props> = props => {
     data: [size, variant, color]
   })
 
+  console.log('PROPS====', props)
+
   return (
     <ButtonBase className={classNames} {...btnProps}>
       {children}
