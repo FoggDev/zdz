@@ -1,11 +1,13 @@
 import React from 'react'
 import classNamesGenerator from '../../theme/classNamesGenerator'
 import { COMPONENT_CLASS_NAME, ButtonBase, Sizes, Variants, Colors } from './styles'
+import { Theme } from '../../theme/theme'
 
 interface Props extends React.ComponentPropsWithoutRef<'button'> {
   size?: Sizes
   variant?: Variants
   color?: Colors
+  theme?: Theme
 }
 
 const Button: React.FC<Props> = props => {
@@ -15,9 +17,8 @@ const Button: React.FC<Props> = props => {
     ccn: COMPONENT_CLASS_NAME,
     data: [size, variant, color]
   })
-
-  console.log('PROPS====', props)
-
+  console.log('PROPS====>>>>', props)
+  console.log('btnProps====', btnProps)
   return (
     <ButtonBase className={classNames} {...btnProps}>
       {children}
