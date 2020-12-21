@@ -334,5 +334,5 @@ export const ButtonBase = styled.button`
 
   ${ButtonSizesStyles}
 
-  ${({ theme }) => ButtonVariantsStyles(theme || defaultTheme)}
+  ${({ theme }) => (theme ? ButtonVariantsStyles(theme) : ButtonVariantsStyles(defaultTheme))}
 `
