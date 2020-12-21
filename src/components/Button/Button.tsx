@@ -3,15 +3,14 @@ import { defaultTheme } from '../../theme'
 import classNamesGenerator from '../../theme/classNamesGenerator'
 import { COMPONENT_CLASS_NAME, ButtonBase, Sizes, Variants, Colors } from './styles'
 
-interface iProps {
-  children: any
+interface Props extends React.ComponentPropsWithoutRef<'button'> {
   theme?: any
   size?: Sizes
   variant?: Variants
   color?: Colors
 }
 
-const Button: FC<iProps> = ({
+const Button: FC<Props> = ({
   children,
   theme,
   size = 'md',
